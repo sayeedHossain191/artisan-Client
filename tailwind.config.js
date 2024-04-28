@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     fontFamily: {
-
+      josefin: "'Josefin Sans', sans-serif;",
+      junge: "'Junge', cursive;",
+      garamond: "'EB Garamond', serif;"
     },
     extend: {},
   },
