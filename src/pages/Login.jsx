@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 
 import { FcGoogle } from "react-icons/fc";
 import { FaGithub } from "react-icons/fa";
@@ -69,7 +69,7 @@ const Login = () => {
     return (
         <div>
             <div>
-                <h2 className='text-4xl my-8 text-center font-merriweather'>Login your Account</h2>
+                <h2 className='text-5xl my-8 text-center font-garamond'>Login your Account</h2>
 
                 <form onSubmit={handleLogin} className="card-body md:w-3/4 lg:w-1/2 mx-auto font-lato">
                     <div className="form-control">

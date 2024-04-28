@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
-import { Helmet } from 'react-helmet-async';
+// import { Helmet } from 'react-helmet-async';
 
 const Register = () => {
 
@@ -49,7 +49,9 @@ const Register = () => {
                 console.log(result.user)
 
                 //New user has been created
-                const user = { email };
+                const createdAt = result.user?.metadata?.creationTime;
+                const user = { email, createdAt };
+
                 fetch('http://localhost:5000/user', {
                     method: 'POST',
                     headers: {
@@ -71,7 +73,7 @@ const Register = () => {
     return (
         <div>
             <div>
-                <h2 className='text-4xl my-8 text-center font-merriweather'>Please Register</h2>
+                <h2 className='text-5xl my-8 text-center font-garamond'>Please Register</h2>
 
                 <form onSubmit={handleRegister} className="card-body md:w-3/4 lg:w-1/2 mx-auto font-lato">
 
@@ -85,7 +87,7 @@ const Register = () => {
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
-                        <input type="text" name='photo' placeholder="photo URL" className="input input-bordered" required />
+                        <input type="url" name='photo' placeholder="photo URL" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
