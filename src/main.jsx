@@ -15,6 +15,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import MyArtAndCraft from './pages/MyArtAndCraft';
 import AllArtAndCraft from './pages/AllArtAndCraft';
+import AuthProvider from './providers/AuthProvider';
 
 const router = createBrowserRouter([
   {
@@ -36,9 +37,9 @@ const router = createBrowserRouter([
         element: <Register />
       },
       {
-        path: "/details",
+        path: "/details/:id",
         element: <ArtDetails />,
-        loader: () => fetch('http://localhost:5000/artCraft')
+        loader: ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
       },
       {
         path: "/addCraft",
@@ -60,6 +61,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>,
 )

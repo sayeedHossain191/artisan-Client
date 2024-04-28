@@ -9,9 +9,6 @@ const ArtDetails = () => {
     const details = arts.find(art => art._id === idInt);
     console.log(details)
 
-    fetch(`http://localhost:5000/artCraft/${_id}`)
-        .then(res => res.json())
-        .then(data => console.log(data))
 
     return (
         <div>
