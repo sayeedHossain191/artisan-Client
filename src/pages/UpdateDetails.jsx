@@ -1,4 +1,3 @@
-import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -6,14 +5,12 @@ const UpdateDetails = () => {
 
     const art = useLoaderData();
 
-    const { name, image, item, category, description, price, customization, stock, time } = art;
+    const { image, item, category, description, price, customization, stock, time, rating } = art;
 
     const handleUpdateArt = (event) => {
         event.preventDefault();
 
         const form = event.target;
-
-        const name = form.name.value;
 
         const image = form.image.value;
         const item = form.item.value;
@@ -23,8 +20,9 @@ const UpdateDetails = () => {
         const customization = form.customization.value;
         const stock = form.stock.value;
         const time = form.time.value;
+        const rating = form.rating.value;
 
-        const updatedArt = { name, image, item, category, description, price, customization, stock, time }
+        const updatedArt = { image, item, category, description, price, customization, stock, time, rating }
 
         console.log(updatedArt);
 
@@ -53,10 +51,11 @@ const UpdateDetails = () => {
 
     return (
         <div>
-            <h2>Update Your Art & Craft: {name}</h2>
+            <h2>Update Your Art & Craft: {item}</h2>
 
             <form onSubmit={handleUpdateArt}>
-                <div className="md:flex gap-4">
+
+                {/* <div className="md:flex gap-4">
 
                     <div className='form-control md:w-1/2'>
                         <label className='label'>
@@ -67,16 +66,16 @@ const UpdateDetails = () => {
                         </label>
                     </div>
 
-                    {/* <div className='form-control md:w-1/2'>
+                    <div className='form-control md:w-1/2'>
                         <label className='label'>
                             <span className='label-text'>User Email</span>
                         </label>
                         <label className='input-group'>
                             <input type="email" placeholder='Email' name="email" className='input input-bordered w-full' />
                         </label>
-                    </div> */}
+                    </div>
 
-                </div>
+                </div> */}
 
                 <div className='form-control w-full'>
                     <label className='label'>
@@ -153,6 +152,22 @@ const UpdateDetails = () => {
                     </label>
                     <label className='input-group'>
                         <input type="time" defaultValue={time} placeholder='processing_time' name="time" className='input input-bordered w-full' />
+                    </label>
+                </div>
+
+                <div className='form-control md:w-1/2'>
+                    <label className='label'>
+                        <span className='label-text'>Rating</span>
+                    </label>
+                    <label className='input-group'>
+                        <select className="select select-bordered w-full max-w-xs" name='rating'>
+                            <option disabled selected>Rate This Item</option>
+                            <option>1.0</option>
+                            <option>2.0</option>
+                            <option>3.0</option>
+                            <option>4.0</option>
+                            <option>5.0</option>
+                        </select>
                     </label>
                 </div>
 

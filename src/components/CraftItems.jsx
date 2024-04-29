@@ -22,7 +22,7 @@ const CraftItems = ({ art }) => {
                         <h3 className="text-xl font-garamond">{stock}</h3>
                     </div>
 
-                    <Link to={`/details/${_id}`}>
+                    <Link to={`details/${_id}`}>
                         <div className="card-actions">
                             <button className="btn bg-[#D1D5DB] text-black w-full rounded-none mt-4">View Details</button>
                         </div>

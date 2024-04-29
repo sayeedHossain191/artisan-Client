@@ -17,8 +17,9 @@ const AddCraft = () => {
         const customization = form.customization.value;
         const stock = form.stock.value;
         const time = form.time.value;
+        const rating = form.rating.value;
 
-        const newArt = { name, email, image, item, category, description, price, customization, stock, time }
+        const newArt = { name, email, image, item, category, description, price, customization, stock, time, rating }
 
         console.log(newArt);
 
@@ -153,7 +154,7 @@ const AddCraft = () => {
                         <span className='label-text'>Rating</span>
                     </label>
                     <label className='input-group'>
-                        <select className="select select-bordered w-full max-w-xs">
+                        <select className="select select-bordered w-full max-w-xs" name='rating'>
                             <option disabled selected>Rate This Item</option>
                             <option>1.0</option>
                             <option>2.0</option>

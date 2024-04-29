@@ -1,9 +1,11 @@
 import { GiPencilBrush } from "react-icons/gi";
-//import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import img from '../assets/mosaic-marble-tiles-background.jpg'
-import Swal from 'sweetalert2'
+// import Swal from 'sweetalert2'
 
 const MyArtAndCraft = () => {
+
+    // const { image, item, price, customization, stock, time, rating, _id } = art;
 
     // const handleDelete = (_id) => {
     //     Swal.fire({
@@ -37,6 +39,9 @@ const MyArtAndCraft = () => {
 
     return (
         <div>
+
+            <h2>My Collection</h2>
+
             <div className="w-96 h-96 bg-base-100 border-none">
                 <figure><img src={img} alt="Shoes" /></figure>
                 <div className="mt-5">
@@ -53,13 +58,14 @@ const MyArtAndCraft = () => {
                         <h3 className="text-xl font-garamond">In Stock
                         </h3>
                     </div>
-                    <div className="card-actions">
-                        <button className="btn bg-[#D1D5DB] text-black rounded-none mt-4 ">Update</button>
-                        <button className="btn bg-[#D1D5DB] text-black rounded-none mt-4">Delete</button>
-                    </div>
-                    {/* <Link to={`/details/${_id}`}>
-                        
-                    </Link> */}
+                    {/* <div className="card-actions">
+                        <Link to={`/update/${_id}`}>
+                            <button className="btn bg-[#D1D5DB] text-black rounded-none mt-4">Update</button>
+                        </Link>
+
+                        <button onClick={() => handleDelete(_id)} className="btn bg-[#D1D5DB] text-black rounded-none mt-4">Delete</button>
+                    </div> */}
+
 
                 </div>
             </div>
