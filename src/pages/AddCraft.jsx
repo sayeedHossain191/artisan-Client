@@ -148,25 +148,21 @@ const AddCraft = () => {
                     </label>
                 </div>
 
-                {/* <div className='form-control md:w-1/2'>
+                <div className='form-control md:w-1/2'>
                     <label className='label'>
                         <span className='label-text'>Rating</span>
                     </label>
                     <label className='input-group'>
-                        <div className="rating">
-                            <select
-                                id="ratings"
-                                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-                            >
-                                <option value="5">5 stars</option>
-                                <option value="4">4 stars</option>
-                                <option value="3">3 stars</option>
-                                <option value="2">2 stars</option>
-                                <option value="1">1 star</option>
-                            </select>
-                        </div>
+                        <select className="select select-bordered w-full max-w-xs">
+                            <option disabled selected>Rate This Item</option>
+                            <option>1.0</option>
+                            <option>2.0</option>
+                            <option>3.0</option>
+                            <option>4.0</option>
+                            <option>5.0</option>
+                        </select>
                     </label>
-                </div> */}
+                </div>
 
                 <input type="submit" value="Add" className="btn btn-block mt-8" />
             </form>
