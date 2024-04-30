@@ -44,7 +44,7 @@ const MyArtAndCraft = () => {
         <div>
 
             <div className="my-20">
-                <h2 className="font-garamond text-center text-5xl font-bold">My Collection</h2>
+                <h2 className="font-garamond text-center text-5xl font-medium">MY COLLECTION</h2>
                 <h3 className='font-josefin text-center'>ART / CRAFT</h3>
             </div>
 

@@ -22,10 +22,6 @@ const Banner = () => {
 
     return (
         <div>
-            <Marquee>
-                <h3 className='mt-20 font-josefin text-4xl link'>UPTO 40% OFF FOR OUR EID-UL-FITR COLLECTION</h3>
-            </Marquee>
-
             <div className='mt-20 mx-28'>
                 <Swiper
                     spaceBetween={30}
@@ -48,6 +44,10 @@ const Banner = () => {
                     <SwiperSlide><img src={slide5} alt="" /></SwiperSlide>
                 </Swiper>
             </div>
+
+            <Marquee>
+                <h3 className='mt-20 font-josefin text-4xl link'>UPTO 40% OFF FOR OUR EID-UL-FITR COLLECTION</h3>
+            </Marquee>
         </div>
     );
 };

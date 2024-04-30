@@ -7,8 +7,10 @@ const ArtAndCraftCategories = () => {
 
     return (
         <div>
-            <h2 className='text-3xl font-garamond text-center my-20'>VISIT OUR CATEGORY</h2>
-
+            <div className="my-20">
+                <h2 className='text-4xl font-garamond text-center '>VISIT OUR CATEGORY</h2>
+                <h3 className='font-josefin text-center'>ART / CRAFT</h3>
+            </div>
 
             <div className="grid grid-cols-3 gap-6 max-w-5xl place-items-center mx-32">
                 {

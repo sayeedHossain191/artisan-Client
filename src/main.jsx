@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element: <Register />
       },
       {
-        path: "/details/:id",
+        path: '/details/:id',
         element: <ArtDetails />,
         loader: ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
       },

@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div>
             <div className='text-center my-20'>
-                <h2 className='text-3xl font-garamond font-bold'>ABOUT ARTISAN</h2>
+                <h2 className='text-4xl font-garamond font-bold'>ABOUT ARTISAN</h2>
                 <p className='font-josefin max-w-md mx-auto'>Artisan's handmade ceramic products have been around since 1950, let's explore our journey</p>
             </div>
 
