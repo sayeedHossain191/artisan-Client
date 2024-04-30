@@ -80,22 +80,24 @@ const AddCraft = () => {
                     </label>
                 </div>
 
-                <div className='form-control md:w-1/2'>
-                    <label className='label'>
-                        <span className='label-text'>Item_Name</span>
-                    </label>
-                    <label className='input-group'>
-                        <input type="text" placeholder='item_name' name="item" className='input input-bordered w-full' />
-                    </label>
-                </div>
+                <div className='md:flex gap-4'>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>Item_Name</span>
+                        </label>
+                        <label className='input-group'>
+                            <input type="text" placeholder='item_name' name="item" className='input input-bordered w-full' />
+                        </label>
+                    </div>
 
-                <div className='form-control md:w-1/2'>
-                    <label className='label'>
-                        <span className='label-text'>Subcategory_Name</span>
-                    </label>
-                    <label className='input-group'>
-                        <input type="text" placeholder='sub_name' name="subcategory" className='input input-bordered w-full' />
-                    </label>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>Subcategory_Name</span>
+                        </label>
+                        <label className='input-group'>
+                            <input type="text" placeholder='sub_name' name="subcategory" className='input input-bordered w-full' />
+                        </label>
+                    </div>
                 </div>
 
                 <div className='form-control w-full'>
@@ -107,62 +109,66 @@ const AddCraft = () => {
                     </label>
                 </div>
 
-                <div className='form-control md:w-1/2'>
-                    <label className='label'>
-                        <span className='label-text'>Price</span>
-                    </label>
-                    <label className='input-group'>
-                        <input type="number" placeholder='price' name="price" className='input input-bordered w-full' />
-                    </label>
+                <div className='md:flex gap-4'>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>Price</span>
+                        </label>
+                        <label className='input-group'>
+                            <input type="number" placeholder='price' name="price" className='input input-bordered w-full' />
+                        </label>
+                    </div>
+
+                    <div className='form-control'>
+                        <label className='label'>
+                            <span className='label-text'>Customization</span>
+                        </label>
+                        <label className='input-group'>
+                            <select className="select select-bordered" name="customization">
+                                <option>Yes</option>
+                                <option>No</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div className='form-control'>
+                        <label className='label'>
+                            <span className='label-text'>Stock Status</span>
+                        </label>
+                        <label className='input-group'>
+                            <select className="select select-bordered w-full max-w-xs" name="stock">
+                                <option>In Stock</option>
+                                <option>Made to Order</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
 
-                <div className='form-control'>
-                    <label className='label'>
-                        <span className='label-text'>Customization</span>
-                    </label>
-                    <label className='input-group'>
-                        <select className="select select-bordered" name="customization">
-                            <option>Yes</option>
-                            <option>No</option>
-                        </select>
-                    </label>
-                </div>
+                <div className='md:flex gap-4'>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>Processing_Time</span>
+                        </label>
+                        <label className='input-group'>
+                            <input type="time" placeholder='processing_time' name="time" className='input input-bordered w-full' />
+                        </label>
+                    </div>
 
-                <div className='form-control'>
-                    <label className='label'>
-                        <span className='label-text'>Stock Status</span>
-                    </label>
-                    <label className='input-group'>
-                        <select className="select select-bordered w-full max-w-xs" name="stock">
-                            <option>In Stock</option>
-                            <option>Made to Order</option>
-                        </select>
-                    </label>
-                </div>
-
-                <div className='form-control md:w-1/2'>
-                    <label className='label'>
-                        <span className='label-text'>Processing_Time</span>
-                    </label>
-                    <label className='input-group'>
-                        <input type="time" placeholder='processing_time' name="time" className='input input-bordered w-full' />
-                    </label>
-                </div>
-
-                <div className='form-control md:w-1/2'>
-                    <label className='label'>
-                        <span className='label-text'>Rating</span>
-                    </label>
-                    <label className='input-group'>
-                        <select className="select select-bordered w-full max-w-xs" name='rating'>
-                            <option disabled selected>Rate This Item</option>
-                            <option>1.0</option>
-                            <option>2.0</option>
-                            <option>3.0</option>
-                            <option>4.0</option>
-                            <option>5.0</option>
-                        </select>
-                    </label>
+                    <div className='form-control md:w-1/2'>
+                        <label className='label'>
+                            <span className='label-text'>Rating</span>
+                        </label>
+                        <label className='input-group'>
+                            <select className="select select-bordered w-full max-w-xs" name='rating'>
+                                <option disabled selected>Rate This Item</option>
+                                <option>1.0</option>
+                                <option>2.0</option>
+                                <option>3.0</option>
+                                <option>4.0</option>
+                                <option>5.0</option>
+                            </select>
+                        </label>
+                    </div>
                 </div>
 
                 <input type="submit" value="Add" className="btn btn-block mt-8" />

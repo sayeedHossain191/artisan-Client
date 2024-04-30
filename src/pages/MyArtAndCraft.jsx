@@ -1,14 +1,14 @@
 import { GiPencilBrush } from "react-icons/gi";
 import { MdStar } from "react-icons/md";
 import { Link } from "react-router-dom";
-//import img from '../assets/mosaic-marble-tiles-background.jpg'
+
 import { useLoaderData } from "react-router-dom";
 import Swal from 'sweetalert2'
 
 const MyArtAndCraft = () => {
 
     const loadedMyArt = useLoaderData()
-    const { _id } = loadedMyArt
+    // const { _id } = loadedMyArt
 
     const handleDelete = (_id) => {
         Swal.fire({
@@ -43,16 +43,16 @@ const MyArtAndCraft = () => {
     return (
         <div>
 
-            <div className="my-20">
-                <h2 className="font-garamond text-center text-5xl font-medium">MY COLLECTION</h2>
+            <div className="">
+                <h2 className="mt-20 font-garamond text-center text-5xl font-medium">MY COLLECTION</h2>
                 <h3 className='font-josefin text-center'>ART / CRAFT</h3>
             </div>
 
-            <div className="grid grid-cols-3 gap-40 place-items-center mx-32">
+            <div className="grid grid-cols-3 gap-30 place-items-center mx-32">
                 {
                     loadedMyArt.map(art => <div key={art._id}>
 
-                        <div className="w-96 h-96 bg-base-100 border-none">
+                        <div className="w-96 my-20 bg-base-100 border-none">
                             <figure><img src={art.image} alt="Shoes" /></figure>
                             <div className="mt-5">
                                 <h2 className="card-title font-josefin text-2xl">
@@ -75,11 +75,11 @@ const MyArtAndCraft = () => {
                                     </h3>
                                 </div>
                                 <div className="card-actions">
-                                    <Link to={`/update/${_id}`}>
+                                    <Link to={`/update/${art._id}`}>
                                         <button className="btn bg-[#D1D5DB] text-black rounded-none mt-4">Update</button>
                                     </Link>
 
-                                    <button onClick={() => handleDelete(_id)} className="btn bg-[#D1D5DB] text-black rounded-none mt-4">Delete</button>
+                                    <button onClick={() => handleDelete(art._id)} className="btn bg-[#D1D5DB] text-black rounded-none mt-4">Delete</button>
                                 </div>
 
 

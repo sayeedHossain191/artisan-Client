@@ -8,12 +8,12 @@ const About = () => {
                 <p className='font-josefin max-w-md mx-auto'>Artisan's handmade ceramic products have been around since 1950, let's explore our journey</p>
             </div>
 
-            <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1 mx-28'>
                 <div className="hero h-96 bg-base-200">
                     <div className="hero-content text-center ">
                         <div className="max-w-md">
                             <h1 className="text-3xl font-bold max-w-sm font-garamond mx-auto">MADE IN BANGLADESH SINCE 1950</h1>
-                            <p className="py-6 font-josefin">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <p className="py-6 font-josefin">The best-selling art subjects include: Traditional landscapes: Landscapes, such as beach scenes, rolling hills, and impressionistic landscapes, elicit a sense of peacefulness and calm, often evoking nostalgic memories in the viewer.</p>
                             <a className="link font-josefin font-bold">READ MORE</a>
                         </div>
                     </div>
@@ -21,7 +21,7 @@ const About = () => {
                 <div className="hero h-96" style={{ backgroundImage: `url(${background1})` }}>
                 </div>
             </div>
-            <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1 mx-28'>
                 <div className="hero h-96" style={{ backgroundImage: `url(${background2})` }}>
                 </div>
                 <div className="hero h-96 bg-base-200">

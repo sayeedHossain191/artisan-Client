@@ -1,6 +1,6 @@
-import { ToastContainer, toast } from 'react-toastify';
+// import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import Swal from 'sweetalert2'
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../providers/AuthProvider';
@@ -22,7 +22,8 @@ const Register = () => {
         const photo = form.get('photo');
         const email = form.get('email');
         const password = form.get('password');
-        console.log(name, photo, email, password)
+        const user = { name, email, photo, password }
+        console.log(user)
 
         setRegisterError('')
 
@@ -38,10 +39,6 @@ const Register = () => {
             setRegisterError('Password should contain atleast one lower case')
             return;
         }
-        else {
-            toast("Password is not valid");
-
-        }
 
         //Create User
         createUser(email, password)
@@ -50,7 +47,7 @@ const Register = () => {
 
                 //New user has been created
                 const createdAt = result.user?.metadata?.creationTime;
-                const user = { email, createdAt };
+                const user = { name, email, createdAt, photo };
 
                 fetch('http://localhost:5000/user', {
                     method: 'POST',
@@ -61,7 +58,15 @@ const Register = () => {
                 })
                     .then(rse => rse.json())
                     .then(data => {
-                        console.log(data)
+                        console.log(data);
+                        if (data.insertedId) {
+                            Swal.fire({
+                                title: 'Success!',
+                                text: 'User has been created Successfully',
+                                icon: 'success',
+                                confirmButtonText: 'Cool'
+                            })
+                        }
                     })
             })
             .catch(error => {
@@ -83,12 +88,12 @@ const Register = () => {
                         </label>
                         <input type="text" name='name' placeholder="name" className="input input-bordered" required />
                     </div>
-                    {/* <div className="form-control">
+                    <div className="form-control">
                         <label className="label">
                             <span className="label-text">Photo URL</span>
                         </label>
                         <input type="url" name='photo' placeholder="photo URL" className="input input-bordered" required />
-                    </div> */}
+                    </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Email</span>
@@ -115,7 +120,7 @@ const Register = () => {
 
                 <p className='text-center mt-4'>Already have an account? <Link className='text-blue-600 font-bold' to='/login'>Login</Link></p>
             </div>
-            <ToastContainer />
+            {/* <ToastContainer /> */}
         </div>
     );
 };

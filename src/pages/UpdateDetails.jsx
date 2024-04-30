@@ -5,7 +5,7 @@ const UpdateDetails = () => {
 
     const art = useLoaderData();
 
-    const { image, item, category, description, price, customization, stock, time, rating } = art;
+    const { _id, image, item, category, description, price, customization, stock, time, rating } = art;
 
     const handleUpdateArt = (event) => {
         event.preventDefault();
@@ -54,28 +54,6 @@ const UpdateDetails = () => {
             <h2>Update Your Art & Craft: {item}</h2>
 
             <form onSubmit={handleUpdateArt}>
-
-                {/* <div className="md:flex gap-4">
-
-                    <div className='form-control md:w-1/2'>
-                        <label className='label'>
-                            <span className='label-text'>User Name</span>
-                        </label>
-                        <label className='input-group'>
-                            <input type="text" defaultValue={name} placeholder='Name' name="name" className='input input-bordered w-full' />
-                        </label>
-                    </div>
-
-                    <div className='form-control md:w-1/2'>
-                        <label className='label'>
-                            <span className='label-text'>User Email</span>
-                        </label>
-                        <label className='input-group'>
-                            <input type="email" placeholder='Email' name="email" className='input input-bordered w-full' />
-                        </label>
-                    </div>
-
-                </div> */}
 
                 <div className='form-control w-full'>
                     <label className='label'>

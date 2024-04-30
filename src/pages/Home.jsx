@@ -36,15 +36,11 @@ const Home = () => {
 
             <Banner />
             <ArtAndCraftCategories />
-            <div className='mx-32 my-40 grid lg:grid-cols-3 md:grid-cols-2 gap-4'>
+            <div className='mx-32 my-40 grid lg:grid-cols-3 md:grid-cols-2 gap-10'>
                 {
                     arts.map(art => <CraftItems key={art._id} art={art}></CraftItems>)
                 }
             </div>
-
-
-
-
 
 
             <About />

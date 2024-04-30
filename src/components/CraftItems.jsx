@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { GiPencilBrush } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
@@ -8,7 +9,7 @@ const CraftItems = ({ art }) => {
 
     return (
         <div>
-            <div className="w-96 h-96 bg-base-100 border-none">
+            <div className="w-full bg-base-100 border-none">
                 <figure><img src={image} alt="Shoes" /></figure>
                 <div className="mt-6">
                     <h2 className="card-title font-josefin text-2xl">

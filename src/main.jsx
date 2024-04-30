@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch('http://localhost:5000/artCraft')
+        loader: async () => fetch('http://localhost:5000/artCraft')
       },
       {
         path: '/login',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <ArtDetails />,
-        loader: ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+        loader: async ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
       },
       {
         path: "/addCraft",
@@ -55,24 +55,24 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyArtAndCraft />
         </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/artCraft')
+        loader: async () => fetch('http://localhost:5000/artCraft')
       },
       {
         path: '/update/:id',
         element: <PrivateRoute>
           <UpdateDetails />
         </PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+        loader: async ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
       },
       {
         path: "/allArtAndCraft",
         element: <AllArtAndCraft />,
-        loader: () => fetch('http://localhost:5000/user')
+        loader: async () => fetch('http://localhost:5000/user')
       },
       {
-        path: "/allArtAndCraft",
+        path: "/categories",
         element: <ArtAndCraftCategories />,
-        loader: () => fetch('http://localhost:5000/ceramicsAndPottery')
+        // loader: async () => fetch('http://localhost:5000/ceramicsAndPottery')
       },
 
 
