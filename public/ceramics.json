@@ -1,0 +1,32 @@
+[
+    {
+        "_id": 1,
+        "image": "https://i.ibb.co/f1H74tx/oriento-ma-VIp-NNtml-Q-unsplash.jpg",
+        "subcategory": "Handcrafted Home Decor"
+    },
+    {
+        "_id": 2,
+        "image": "https://i.ibb.co/sCxVgdr/abstract-brown-cubic-patterned-background.jpg",
+        "subcategory": "Wheel-Thrown Ceramics"
+    },
+    {
+        "_id": 3,
+        "image": "https://i.ibb.co/qgFzBQF/potters-1985519-1280.jpg",
+        "subcategory": "Clay Made Pottery"
+    },
+    {
+        "_id": 4,
+        "image": "https://i.ibb.co/P41WGKt/vladimir-gladkov-NPPIq1-XFdck-unsplash.jpg",
+        "subcategory": "Porcelain Sculptures"
+    },
+    {
+        "_id": 5,
+        "image": "https://i.ibb.co/pXSgv18/vecteezy-ai-generated-handcrafted-ceramic-pottery-display-40560733.jpg",
+        "subcategory": "Stoneware Vessels"
+    },
+    {
+        "_id": 6,
+        "image": "https://i.ibb.co/25ms2z5/chinese-5103333-1280.jpg",
+        "subcategory": "Terracotta Tiles"
+    }
+]

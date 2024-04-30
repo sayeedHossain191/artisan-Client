@@ -18,6 +18,7 @@ import AllArtAndCraft from './pages/AllArtAndCraft';
 import AuthProvider from './providers/AuthProvider';
 import PrivateRoute from './routes/PrivateRoute';
 import UpdateDetails from './pages/UpdateDetails';
+import ArtAndCraftCategories from './components/ArtAndCraftCategories';
 
 const router = createBrowserRouter([
   {
@@ -53,7 +54,8 @@ const router = createBrowserRouter([
         path: "/myArtAndCraft",
         element: <PrivateRoute>
           <MyArtAndCraft />
-        </PrivateRoute>
+        </PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/artCraft')
       },
       {
         path: '/update/:id',
@@ -66,6 +68,11 @@ const router = createBrowserRouter([
         path: "/allArtAndCraft",
         element: <AllArtAndCraft />,
         loader: () => fetch('http://localhost:5000/user')
+      },
+      {
+        path: "/allArtAndCraft",
+        element: <ArtAndCraftCategories />,
+        loader: () => fetch('http://localhost:5000/ceramicsAndPottery')
       },
 
 

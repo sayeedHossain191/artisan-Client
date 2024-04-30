@@ -1,75 +1,52 @@
-import img1 from '../assets/AdobeStock_716144522_Preview.jpeg'
-import './Banner.css'
+import slide1 from '../assets/chloe-bolton-L_bXRw-bZ9I-unsplash.jpg'
+import slide2 from '../assets/china-805184_1280.jpg'
+import slide3 from '../assets/smiley-artist-painting-clay-pot.jpg'
+import slide4 from '../assets/ceramic-pitcher-6774287_1280.jpg'
+import slide5 from '../assets/view-ceramic-pottery-items.jpg'
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+//import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import '../../src/style.css'
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import Marquee from "react-fast-marquee";
 const Banner = () => {
 
 
-    document.addEventListener('click', function () {
-        let items = document.querySelectorAll('.item')
-        document.querySelector('.slide').appendChild(items[0])
-    })
-
-    document.addEventListener('click', function () {
-        let items = document.querySelectorAll('.item')
-        document.querySelector('.slide').prepend(items[items.length - 6]) // here the length of items = 6
-    })
-
     return (
         <div>
-            <div className="container">
+            <Marquee>
+                <h3 className='mt-20 font-josefin text-4xl link'>UPTO 40% OFF FOR OUR EID-UL-FITR COLLECTION</h3>
+            </Marquee>
 
-                <div className="slide">
-
-
-                    <div className="item" style={{ backgroundImage: `url(${img1})` }}>
-                        <div className="content">
-                            <div className="name">Switzerland</div>
-                            <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="content">
-                            <div className="name text-black">Finland</div>
-                            <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="content">
-                            <div className="name">Iceland</div>
-                            <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div className="item" >
-                        <div className="content">
-                            <div className="name">Australia</div>
-                            <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="content">
-                            <div className="name">Netherland</div>
-                            <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-                    <div className="item">
-                        <div className="content">
-                            <div className="name">Ireland</div>
-                            <div className="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
-                            <button>See More</button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div className="button">
-                    <button className="prev"><i className="fa-solid fa-arrow-left"></i></button>
-                    <button className="next"><i className="fa-solid fa-arrow-right"></i></button>
-                </div>
-
+            <div className='mt-20 mx-28'>
+                <Swiper
+                    spaceBetween={30}
+                    centeredSlides={true}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    modules={[Autoplay, Pagination, Navigation]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide><img src={slide1} alt="" /></SwiperSlide>
+                    <SwiperSlide><img src={slide2} alt="" /></SwiperSlide>
+                    <SwiperSlide><img src={slide3} alt="" /></SwiperSlide>
+                    <SwiperSlide><img src={slide4} alt="" /></SwiperSlide>
+                    <SwiperSlide><img src={slide5} alt="" /></SwiperSlide>
+                </Swiper>
             </div>
         </div>
     );
