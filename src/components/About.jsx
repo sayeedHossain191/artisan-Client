@@ -8,7 +8,7 @@ const About = () => {
                 <p className='font-josefin max-w-md mx-auto'>Artisan's handmade ceramic products have been around since 1950, let's explore our journey</p>
             </div>
 
-            <div className='flex'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
                 <div className="hero h-96 bg-base-200">
                     <div className="hero-content text-center ">
                         <div className="max-w-md">
@@ -21,7 +21,7 @@ const About = () => {
                 <div className="hero h-96" style={{ backgroundImage: `url(${background1})` }}>
                 </div>
             </div>
-            <div className='flex'>
+            <div className='grid lg:grid-cols-2 sm:grid-cols-1'>
                 <div className="hero h-96" style={{ backgroundImage: `url(${background2})` }}>
                 </div>
                 <div className="hero h-96 bg-base-200">

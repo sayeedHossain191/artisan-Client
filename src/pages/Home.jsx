@@ -30,7 +30,7 @@ const Home = () => {
                 <Lottie className='w-32' animationData={craft} />
             </div>
 
-            <h1>WELCOME TO <span>{text}</span>
+            <h1 className='text-7xl text-center font-garamond'>WELCOME TO ARTISAN<span>{text}</span>
                 <Cursor /></h1>
 
 
