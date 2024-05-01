@@ -8,7 +8,7 @@ const ArtAndCraftCategories = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/ceramicsAndPottery')
+        fetch(' https://b9a10-art-and-craft-server.vercel.app/ceramicsAndPottery')
             .then(response => response.json())
             .then(data => setArt(data))
 

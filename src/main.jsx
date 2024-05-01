@@ -29,7 +29,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: async () => fetch('http://localhost:5000/artCraft')
+        loader: () => fetch(` https://b9a10-art-and-craft-server.vercel.app/artCraft`)
       },
       {
         path: '/login',
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       {
         path: '/details/:id',
         element: <ArtDetails />,
-        loader: async ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+        loader: ({ params }) => fetch(` https://b9a10-art-and-craft-server.vercel.app/artCraft/${params.id}`)
       },
       {
         path: "/addCraft",
@@ -55,24 +55,23 @@ const router = createBrowserRouter([
         element: <PrivateRoute>
           <MyArtAndCraft />
         </PrivateRoute>,
-        loader: async () => fetch('http://localhost:5000/artCraft')
+        loader: () => fetch(` https://b9a10-art-and-craft-server.vercel.app/artCraft`)
       },
       {
         path: '/update/:id',
         element: <PrivateRoute>
           <UpdateDetails />
         </PrivateRoute>,
-        loader: async ({ params }) => fetch(`http://localhost:5000/artCraft/${params.id}`)
+        loader: ({ params }) => fetch(` https://b9a10-art-and-craft-server.vercel.app/artCraft/${params.id}`)
       },
       {
         path: "/allArtAndCraft",
         element: <AllArtAndCraft />,
-        loader: async () => fetch('http://localhost:5000/user')
+        loader: () => fetch(` https://b9a10-art-and-craft-server.vercel.app/user`)
       },
       {
         path: "/categories",
         element: <ArtAndCraftCategories />,
-        // loader: async () => fetch('http://localhost:5000/ceramicsAndPottery')
       },
 
 

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useLoaderData } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -27,7 +28,7 @@ const UpdateDetails = () => {
         console.log(updatedArt);
 
         //send data to the server
-        fetch(`http://localhost:5000/artCraft/${_id}`, {
+        fetch(` https://b9a10-art-and-craft-server.vercel.app/artCraft/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

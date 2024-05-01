@@ -49,7 +49,7 @@ const Register = () => {
                 const createdAt = result.user?.metadata?.creationTime;
                 const user = { name, email, createdAt, photo };
 
-                fetch('http://localhost:5000/user', {
+                fetch(' https://b9a10-art-and-craft-server.vercel.app/user', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
